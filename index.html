@@ -1,1 +1,1587 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lumé Dental | Modern Dental Care</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =========================================================
+       GLOBAL STYLES
+    ========================================================= */
+
+    :root {
+      --navy: #12324a;
+      --blue: #386f8f;
+      --aqua: #80c7ca;
+      --pale-blue: #eaf5f7;
+      --ice: #f6fafb;
+      --white: #ffffff;
+      --text: #183142;
+      --muted: #6e808b;
+      --line: #dce8ec;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 110px 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 16px;
+      color: var(--blue);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(2.3rem, 5vw, 4.2rem);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    .section-text {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 620px;
+    }
+
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(220, 232, 236, 0.8);
+    }
+
+    nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-family: "Manrope", sans-serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: 5px;
+      color: var(--navy);
+    }
+
+    .logo span {
+      color: var(--aqua);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.9rem;
+      transition: color 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+
+    /* =========================================================
+       BUTTONS
+    ========================================================= */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 25px;
+      border-radius: 100px;
+      background: var(--navy);
+      color: white;
+      font-weight: 500;
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .btn:hover {
+      background: var(--blue);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(18, 50, 74, 0.18);
+    }
+
+    .btn-small {
+      padding: 11px 20px;
+      font-size: 0.86rem;
+    }
+
+    .btn-white {
+      background: white;
+      color: var(--navy);
+    }
+
+    .btn-white:hover {
+      background: var(--pale-blue);
+      color: var(--navy);
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      padding: 85px 0 90px;
+      background:
+        radial-gradient(
+          circle at 12% 25%,
+          rgba(128, 199, 202, 0.18),
+          transparent 30%
+        ),
+        var(--ice);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 14px;
+      margin-bottom: 25px;
+      border: 1px solid #cce3e7;
+      background: rgba(255,255,255,0.7);
+      border-radius: 100px;
+      color: var(--blue);
+      font-size: 0.78rem;
+    }
+
+    .hero-badge::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      background: var(--aqua);
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-family: "Manrope", sans-serif;
+      color: var(--navy);
+      font-size: clamp(3.4rem, 6.5vw, 6.2rem);
+      font-weight: 500;
+      line-height: 0.98;
+      letter-spacing: -4px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 span {
+      color: var(--blue);
+    }
+
+    .hero-description {
+      color: var(--muted);
+      max-width: 540px;
+      font-size: 1.08rem;
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .hero-link {
+      color: var(--navy);
+      font-weight: 500;
+      border-bottom: 1px solid var(--navy);
+      padding-bottom: 3px;
+      transition: color 0.25s ease;
+    }
+
+    .hero-link:hover {
+      color: var(--blue);
+    }
+
+    .hero-image {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 35px 80px rgba(18, 50, 74, 0.13);
+    }
+
+    .hero-image img {
+      height: 590px;
+      object-fit: cover;
+    }
+
+    .hero-card {
+      position: absolute;
+      left: 22px;
+      bottom: 22px;
+      padding: 17px 21px;
+      border-radius: 15px;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-card strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+
+    .hero-card span {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+
+    /* =========================================================
+       TRUST STRIP
+    ========================================================= */
+
+    .trust {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .trust-grid {
+      min-height: 105px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+    }
+
+    .trust-item {
+      padding: 0 30px;
+      border-right: 1px solid var(--line);
+    }
+
+    .trust-item:first-child {
+      padding-left: 0;
+    }
+
+    .trust-item:last-child {
+      border-right: none;
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 3px;
+    }
+
+    .trust-item span {
+      color: var(--muted);
+      font-size: 0.83rem;
+    }
+
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 85px;
+      align-items: center;
+    }
+
+    .about-image {
+      position: relative;
+      padding: 14px;
+      background: var(--pale-blue);
+      border-radius: 28px;
+    }
+
+    .about-image img {
+      height: 570px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .about-content .section-title {
+      margin-bottom: 26px;
+    }
+
+    .about-content .section-text {
+      margin-bottom: 18px;
+    }
+
+    .about-features {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .about-feature {
+      padding: 17px;
+      border-radius: 13px;
+      background: var(--ice);
+      color: var(--navy);
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+
+    /* =========================================================
+       SERVICES
+    ========================================================= */
+
+    .services {
+      background: var(--ice);
+    }
+
+    .services-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 50px;
+      margin-bottom: 55px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      min-height: 280px;
+      padding: 32px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: #afd5dd;
+      box-shadow: 0 20px 45px rgba(18, 50, 74, 0.08);
+    }
+
+    .service-number {
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 13px;
+      background: var(--pale-blue);
+      color: var(--blue);
+      font-size: 0.82rem;
+      margin-bottom: 45px;
+    }
+
+    .service-card h3 {
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+
+    /* =========================================================
+       EXPERIENCE / TREATMENT
+    ========================================================= */
+
+    .experience {
+      background: var(--navy);
+      color: white;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 75px;
+      align-items: center;
+    }
+
+    .experience .eyebrow {
+      color: var(--aqua);
+    }
+
+    .experience .section-title {
+      color: white;
+      margin-bottom: 25px;
+    }
+
+    .experience .section-text {
+      color: #b8cbd6;
+      margin-bottom: 30px;
+    }
+
+    .experience-image {
+      border-radius: 25px;
+      overflow: hidden;
+    }
+
+    .experience-image img {
+      height: 530px;
+      object-fit: cover;
+    }
+
+
+    /* =========================================================
+       DOCTORS
+    ========================================================= */
+
+    .doctors-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 55px;
+    }
+
+    .doctors-header .section-text {
+      margin: 20px auto 0;
+    }
+
+    .doctors-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .doctor-card {
+      overflow: hidden;
+      background: var(--ice);
+      border-radius: 22px;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .doctor-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 20px 45px rgba(18, 50, 74, 0.09);
+    }
+
+    .doctor-photo {
+      height: 430px;
+      overflow: hidden;
+    }
+
+    .doctor-photo img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .doctor-card:hover img {
+      transform: scale(1.025);
+    }
+
+    .doctor-info {
+      padding: 25px;
+    }
+
+    .doctor-info h3 {
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+
+    .doctor-info p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+
+    /* =========================================================
+       CLINIC
+    ========================================================= */
+
+    .clinic {
+      background: var(--ice);
+    }
+
+    .clinic-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .clinic-content .section-title {
+      margin-bottom: 25px;
+    }
+
+    .clinic-content .section-text {
+      margin-bottom: 20px;
+    }
+
+    .clinic-image {
+      overflow: hidden;
+      border-radius: 26px;
+      box-shadow: 0 25px 60px rgba(18, 50, 74, 0.1);
+    }
+
+    .clinic-image img {
+      height: 510px;
+      object-fit: cover;
+    }
+
+
+    /* =========================================================
+       TESTIMONIALS
+    ========================================================= */
+
+    .testimonials {
+      background: var(--pale-blue);
+    }
+
+    .testimonial-header {
+      max-width: 680px;
+      margin-bottom: 50px;
+    }
+
+    .testimonial-header .section-title {
+      margin-bottom: 20px;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .review {
+      background: white;
+      border-radius: 20px;
+      padding: 32px;
+    }
+
+    .stars {
+      color: var(--blue);
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+
+    .review-text {
+      margin-bottom: 26px;
+      color: var(--text);
+    }
+
+    .review-name {
+      display: block;
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .review-service {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+
+    /* =========================================================
+       APPOINTMENT CTA
+    ========================================================= */
+
+    .appointment {
+      padding: 110px 0;
+    }
+
+    .appointment-box {
+      position: relative;
+      overflow: hidden;
+      padding: 80px;
+      border-radius: 30px;
+      color: white;
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(128, 199, 202, 0.45),
+          transparent 35%
+        ),
+        var(--blue);
+    }
+
+    .appointment-box::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 50%;
+      right: -80px;
+      bottom: -120px;
+    }
+
+    .appointment-box h2 {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4.2rem);
+      font-weight: 500;
+      letter-spacing: -2px;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .appointment-box p {
+      position: relative;
+      z-index: 2;
+      max-width: 570px;
+      color: #dcecf1;
+      margin-bottom: 30px;
+    }
+
+    .appointment-box .btn {
+      position: relative;
+      z-index: 2;
+    }
+
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact {
+      background: var(--ice);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+    .contact-content .section-title {
+      margin-bottom: 25px;
+    }
+
+    .contact-details {
+      margin-top: 38px;
+    }
+
+    .contact-item {
+      padding: 17px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .contact-item span {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .contact-item strong {
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+    .hours {
+      background: white;
+      padding: 38px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+    }
+
+    .hours h3 {
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: 1.4rem;
+      margin-bottom: 25px;
+    }
+
+    .hour-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .hour-row:last-child {
+      border-bottom: none;
+    }
+
+    .hour-row strong {
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      background: #0e2739;
+      color: white;
+      padding: 55px 0 30px;
+    }
+
+    .footer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .footer-logo {
+      font-family: "Manrope", sans-serif;
+      letter-spacing: 5px;
+      font-size: 1.3rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 28px;
+      color: #afc0ca;
+      font-size: 0.88rem;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: #839aa8;
+      font-size: 0.78rem;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 950px) {
+
+      .hero-grid,
+      .about-grid,
+      .experience-grid,
+      .clinic-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        gap: 50px;
+      }
+
+      .hero-image img {
+        height: 520px;
+      }
+
+      .services-grid,
+      .reviews-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .trust-item {
+        padding: 25px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .trust-item:nth-child(2) {
+        border-right: none;
+      }
+
+      .services-header {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+
+
+    @media (max-width: 680px) {
+
+      .section {
+        padding: 80px 0;
+      }
+
+      nav {
+        min-height: 68px;
+      }
+
+      .logo {
+        font-size: 1.15rem;
+      }
+
+      .nav-links li:not(:last-child) {
+        display: none;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      .hero h1 {
+        letter-spacing: -2.5px;
+      }
+
+      .hero-image img {
+        height: 390px;
+      }
+
+      .trust-grid,
+      .services-grid,
+      .reviews-grid,
+      .doctors-grid,
+      .about-features {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-item {
+        border-right: none;
+        padding: 22px 0;
+      }
+
+      .about-image img,
+      .experience-image img,
+      .clinic-image img {
+        height: 390px;
+      }
+
+      .doctor-photo {
+        height: 390px;
+      }
+
+      .appointment {
+        padding: 80px 0;
+      }
+
+      .appointment-box {
+        padding: 55px 28px;
+      }
+
+      .footer-top,
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================== -->
+
+  <header>
+    <div class="container">
+      <nav>
+
+        <a href="#home" class="logo">
+          LUMÉ<span>.</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#doctors">Doctors</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="#appointment" class="btn btn-small">
+              Book appointment
+            </a>
+          </li>
+        </ul>
+
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
+
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div>
+
+          <div class="hero-badge">
+            Modern dentistry. Thoughtfully delivered.
+          </div>
+
+          <h1>
+            Dentistry,<br>
+            <span>reimagined.</span>
+          </h1>
+
+          <p class="hero-description">
+            Modern dental care in a calm, considered environment.
+            At Lumé Dental, advanced dentistry meets a more personal,
+            comfortable approach to your smile.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#appointment" class="btn">
+              Book an appointment
+            </a>
+
+            <a href="#services" class="hero-link">
+              Explore services
+            </a>
+          </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+          <img
+            src="lume.png"
+            alt="Lumé Dental modern clinic reception"
+          >
+
+          <div class="hero-card">
+            <strong>Welcome to Lumé</strong>
+            <span>Care designed around you.</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         TRUST STRIP
+    ====================================================== -->
+
+    <section class="trust">
+      <div class="container trust-grid">
+
+        <div class="trust-item">
+          <strong>Modern Care</strong>
+          <span>Advanced dental technology</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>Personal Approach</strong>
+          <span>Treatment designed around you</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>Comfort First</strong>
+          <span>A calm clinical experience</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>Beautiful Results</strong>
+          <span>Health meets aesthetics</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+
+        <div class="about-image">
+          <img
+            src="doctor1.png"
+            alt="Lumé Dental dentist"
+          >
+        </div>
+
+
+        <div class="about-content">
+
+          <span class="eyebrow">Our Philosophy</span>
+
+          <h2 class="section-title">
+            Dental care should feel different.
+          </h2>
+
+          <p class="section-text">
+            Lumé Dental was created around a simple idea: exceptional
+            dentistry doesn't have to feel clinical or intimidating.
+          </p>
+
+          <p class="section-text">
+            We combine thoughtful treatment planning, modern technology
+            and a patient-first approach to create care that feels
+            comfortable, transparent and personal.
+          </p>
+
+          <div class="about-features">
+            <div class="about-feature">Advanced technology</div>
+            <div class="about-feature">Personal treatment plans</div>
+            <div class="about-feature">Comfort-focused care</div>
+            <div class="about-feature">Modern aesthetic dentistry</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         SERVICES
+    ====================================================== -->
+
+    <section class="section services" id="services">
+      <div class="container">
+
+        <div class="services-header">
+
+          <div>
+            <span class="eyebrow">Our Services</span>
+
+            <h2 class="section-title">
+              Everything your<br>
+              smile needs.
+            </h2>
+          </div>
+
+          <p class="section-text">
+            From preventive care to cosmetic transformations,
+            our treatments combine clinical precision with a
+            natural, considered approach.
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+          <article class="service-card">
+            <div class="service-number">01</div>
+            <h3>General Dentistry</h3>
+            <p>
+              Comprehensive examinations, professional cleaning
+              and preventive care designed to protect your smile.
+            </p>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">02</div>
+            <h3>Teeth Whitening</h3>
+            <p>
+              Professional whitening treatments for a brighter,
+              fresher smile with carefully controlled results.
+            </p>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">03</div>
+            <h3>Clear Aligners</h3>
+            <p>
+              Discreet orthodontic solutions designed to gradually
+              create a straighter and more balanced smile.
+            </p>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">04</div>
+            <h3>Dental Implants</h3>
+            <p>
+              Modern restorative solutions created to restore
+              confidence, comfort and long-term function.
+            </p>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">05</div>
+            <h3>Cosmetic Dentistry</h3>
+            <p>
+              Carefully planned cosmetic treatments focused on
+              creating natural-looking, harmonious results.
+            </p>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">06</div>
+            <h3>Smile Consultation</h3>
+            <p>
+              A personal consultation to understand your goals
+              and create the right treatment plan for you.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         PATIENT EXPERIENCE
+    ====================================================== -->
+
+    <section class="section experience">
+
+      <div class="container experience-grid">
+
+        <div>
+
+          <span class="eyebrow">The Lumé Experience</span>
+
+          <h2 class="section-title">
+            Comfortable from the moment you arrive.
+          </h2>
+
+          <p class="section-text">
+            We've designed every part of the Lumé experience around
+            comfort — from our calm interiors to clear explanations
+            and carefully planned treatment.
+          </p>
+
+          <p class="section-text">
+            No rushed appointments. No unnecessary complexity.
+            Just thoughtful dentistry and a team that listens.
+          </p>
+
+          <a href="#appointment" class="btn btn-white">
+            Plan your visit
+          </a>
+
+        </div>
+
+
+        <div class="experience-image">
+          <img
+            src="patient.png"
+            alt="Patient receiving dental treatment at Lumé Dental"
+          >
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         DOCTORS
+    ====================================================== -->
+
+    <section class="section" id="doctors">
+      <div class="container">
+
+        <div class="doctors-header">
+
+          <span class="eyebrow">Meet The Team</span>
+
+          <h2 class="section-title">
+            Expertise with a human touch.
+          </h2>
+
+          <p class="section-text">
+            Our clinicians combine modern dental expertise with
+            an approachable, patient-focused philosophy.
+          </p>
+
+        </div>
+
+
+        <div class="doctors-grid">
+
+          <article class="doctor-card">
+
+            <div class="doctor-photo">
+              <img
+                src="doctor1.png"
+                alt="Dr. Sofia Laurent"
+              >
+            </div>
+
+            <div class="doctor-info">
+              <h3>Dr. Sofia Laurent</h3>
+              <p>Cosmetic & Restorative Dentistry</p>
+            </div>
+
+          </article>
+
+
+          <article class="doctor-card">
+
+            <div class="doctor-photo">
+              <img
+                src="doctor2.png"
+                alt="Dr. Adrian Moreau"
+              >
+            </div>
+
+            <div class="doctor-info">
+              <h3>Dr. Adrian Moreau</h3>
+              <p>Implant & General Dentistry</p>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         CLINIC
+    ====================================================== -->
+
+    <section class="section clinic">
+
+      <div class="container clinic-grid">
+
+        <div class="clinic-content">
+
+          <span class="eyebrow">Our Space</span>
+
+          <h2 class="section-title">
+            Designed for modern dentistry.
+          </h2>
+
+          <p class="section-text">
+            Our clinic combines advanced dental technology with
+            a calm, contemporary environment designed to make
+            every visit feel more comfortable.
+          </p>
+
+          <p class="section-text">
+            Every detail — from our treatment rooms to our
+            equipment — has been chosen with precision,
+            cleanliness and patient experience in mind.
+          </p>
+
+        </div>
+
+
+        <div class="clinic-image">
+          <img
+            src="clinic-room.png"
+            alt="Modern Lumé Dental treatment room"
+          >
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         TESTIMONIALS
+    ====================================================== -->
+
+    <section class="section testimonials">
+      <div class="container">
+
+        <div class="testimonial-header">
+
+          <span class="eyebrow">Patient Stories</span>
+
+          <h2 class="section-title">
+            A reason to smile.
+          </h2>
+
+          <p class="section-text">
+            Thoughtful care means creating an experience patients
+            can feel confident about from beginning to end.
+          </p>
+
+        </div>
+
+
+        <div class="reviews-grid">
+
+          <article class="review">
+
+            <div class="stars">★★★★★</div>
+
+            <p class="review-text">
+              “The entire experience felt completely different from
+              a typical dental visit. Calm, professional and incredibly
+              thoughtful.”
+            </p>
+
+            <span class="review-name">Emma R.</span>
+            <span class="review-service">Cosmetic Dentistry</span>
+
+          </article>
+
+
+          <article class="review">
+
+            <div class="stars">★★★★★</div>
+
+            <p class="review-text">
+              “Everything was explained clearly and I never felt rushed.
+              The clinic is beautiful and the team made me feel completely
+              comfortable.”
+            </p>
+
+            <span class="review-name">Daniel M.</span>
+            <span class="review-service">General Dentistry</span>
+
+          </article>
+
+
+          <article class="review">
+
+            <div class="stars">★★★★★</div>
+
+            <p class="review-text">
+              “From the consultation to the final result, the attention
+              to detail was exceptional. I couldn't be happier with
+              my smile.”
+            </p>
+
+            <span class="review-name">Olivia S.</span>
+            <span class="review-service">Smile Consultation</span>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         APPOINTMENT CTA
+    ====================================================== -->
+
+    <section class="appointment" id="appointment">
+      <div class="container">
+
+        <div class="appointment-box">
+
+          <h2>
+            Your healthiest smile starts here.
+          </h2>
+
+          <p>
+            Schedule a consultation with our team and discover
+            a more thoughtful approach to modern dental care.
+          </p>
+
+          <a href="#contact" class="btn btn-white">
+            Request an appointment
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section class="section contact" id="contact">
+
+      <div class="container contact-grid">
+
+        <div class="contact-content">
+
+          <span class="eyebrow">Contact</span>
+
+          <h2 class="section-title">
+            We'd love to welcome you.
+          </h2>
+
+          <p class="section-text">
+            Have a question or ready to arrange your first visit?
+            Get in touch with our team.
+          </p>
+
+
+          <div class="contact-details">
+
+            <div class="contact-item">
+              <span>Telephone</span>
+              <strong>+1 (555) 240-2026</strong>
+            </div>
+
+            <div class="contact-item">
+              <span>Email</span>
+              <strong>hello@lumedental.com</strong>
+            </div>
+
+            <div class="contact-item">
+              <span>Location</span>
+              <strong>125 Lumé Avenue · Dental Suite 4</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="hours">
+
+          <h3>Opening Hours</h3>
+
+          <div class="hour-row">
+            <span>Monday – Friday</span>
+            <strong>8:00 – 18:00</strong>
+          </div>
+
+          <div class="hour-row">
+            <span>Saturday</span>
+            <strong>9:00 – 15:00</strong>
+          </div>
+
+          <div class="hour-row">
+            <span>Sunday</span>
+            <strong>Closed</strong>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-logo">
+          LUMÉ.
+        </div>
+
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#doctors">Doctors</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p>© 2026 Lumé Dental. All rights reserved.</p>
+
+        <p>Portfolio concept website.</p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
